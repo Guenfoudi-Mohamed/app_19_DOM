@@ -1,5 +1,13 @@
 @charset "utf-8";
 *{margin: 0px;padding: 0px;outline: none;text-decoration: none;list-style: none;box-sizing: border-box;}
 :is(::after,::before){margin: 0px;padding: 0px;box-sizing: border-box;}
+body{min-height: 100vh;max-width: 1440px;margin:0px auto;background-color: skyblue;}
 /* start section */
-body #section{width: 700px;padding:15px;}
+body #section{padding:2em;position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);background-color: #fff;border-radius:7px;}
+body #section .img{max-width:100px;margin: 0px auto 5px auto;}
+body #section .img > img{width: 100%;}
+body #section .time > h2{text-align: center;}
+body #section .time > h2 span:last-child{margin-left: 5px;}
+body #section .listTime{margin: 10px 0px;}
+body #section .listTime :is(.listHour, .listMinute, .listAmPm){font-size: 14px;padding: 5px;background-color: transparent;border: 1px solid grey;cursor: pointer;}
+body #section > .btnAlarm{width: 100%;padding: 10px 5px;font-weight: bold;background-color: #31c3ff;color:#fff;border: none;}
