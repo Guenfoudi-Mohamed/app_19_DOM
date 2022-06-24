@@ -9,13 +9,15 @@
     <body>
         <!-- start section -->
         <section id="section">
+            <!-- img alarm clock -->
             <div class="img"><img src="images/clock.png"></div>
             <div class="time">
                 <h2><span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span><span class="am_pm">AmPm</span></h2>
             </div>
-            <DIV class="listTime">
+            <DIV class="listTime">  
                 <select class="listHour">
                     <option selected  hidden >Hours</option>
+                    <option>00</option>
                     <option>01</option>
                     <option>02</option>
                     <option>03</option>
@@ -27,7 +29,7 @@
                     <option>09</option>
                     <option>10</option>
                     <option>11</option>
-                    <option>12</option>
+                    <!-- <option>12</option> -->
                 </select>
                 <select class="listMinute">
                     <option selected  hidden >Minute</option>
@@ -98,7 +100,9 @@
                     <option>PM</option>
                 </select>
             </div>
+            <!-- btn Set & clear Alarm -->
             <input type="button" class="btnAlarm" title="Set Alarm" value="Set Alarm">
+            <!-- soundAlarm audio mp3 -->
             <audio class="soundAlarm"  src="images/soundAlarm.mp4" controls loop></audio>
         </section>
 
