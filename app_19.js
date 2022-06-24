@@ -54,6 +54,7 @@ btnAlarm.addEventListener('click',function(){
         imgAlarm.classList.remove('imgAalarm');
         arrSelect.length = 0;
         check = false;
+        if(songAlarmMp3.classList.contains('active')){songAlarmMp3.classList.remove('active');}
     };
 });
 
@@ -91,12 +92,14 @@ function Time(){
         if(arrSelect[2].value == 'AM'){
             if(hour == arrSelect[0].value && minute == arrSelect[1].value){
                 songAlarm();
+                songAlarmMp3.classList.add('active');
             }
         }
         else if(arrSelect[2].value == 'PM'){
             hourAlarm = Number(arrSelect[0].value)+12;
             if(hour == hourAlarm && minute == arrSelect[1].value){
                 songAlarm();
+                songAlarmMp3.classList.add('active');
             } 
         }
         pauseAlarmAfterTime(minAlarm,minute);
@@ -104,8 +107,11 @@ function Time(){
 }
 // function song Alarm 'mp3 audio'
 function songAlarm(){
-    songAlarmMp3.play();
-    imgAlarm.classList.add('imgAalarm');
+    if(songAlarmMp3.classList.contains('active') == false){
+        songAlarmMp3.play();
+        imgAlarm.classList.add('imgAalarm');
+        console.log(`after `,`2%c minute`,`color:red;background-color:yellow;`,` automaticly alarm clear`);
+    };
 };
 
 window.onload = function(){
